@@ -7,12 +7,15 @@ datasource db {
 }
 
 model Patient {
-  id        Int      @id @default(autoincrement())
-  nom       String
-  prenom    String
-  region    String
-  telephone String?
-  createdAt DateTime @default(now())
+  id            Int      @id @default(autoincrement())
+  nom           String
+  prenom        String
+  dateNaissance DateTime
+  sexe          String
+  telephone     String?
+  adresse       String?
+  region        String
+  createdAt     DateTime @default(now())
 }
 
 model User {

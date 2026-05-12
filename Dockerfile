@@ -17,6 +17,8 @@ COPY . .
 RUN npx prisma generate
 
 # 7. Compiler Next.js pour la production
+ARG GROQ_API_KEY
+ENV GROQ_API_KEY=$GROQ_API_KEY
 RUN npm run build
 
 # 8. Déclarer le port utilisé
